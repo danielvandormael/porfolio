@@ -1,0 +1,358 @@
+:root {
+    --black: 51, 29, 44;
+    --dark_grey: 63, 46, 62;
+    --light_grey: 167, 130, 149;
+    --lighter_grey: 218,218,218;
+    --blue: 64, 112, 244;
+    --beige: 239, 225, 209;
+    --dark_beige: 255, 186, 134;
+    --light_beige: 241, 240, 232;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+}
+
+.view-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content-wrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: fit-content;
+    overflow: hidden;
+    background-color: rgb(var(--light_beige));
+}
+
+.content-wrapper .home-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.content-wrapper .home-wrapper .txt-animation{
+    position: absolute;
+    display: inline-flex;
+    text-shadow: 0 0 7px #000000;
+}
+
+.content-wrapper .home-wrapper .txt-animation .static-txt{
+    height: 7vw;
+    line-height: 7vw;
+    color: #fff;
+    font-size: 6vw;
+    font-weight: 400;
+}
+
+.content-wrapper .home-wrapper .txt-animation .dynamic-txts{          
+    height: 7vw;
+    line-height: 7vw;
+    overflow: hidden;
+}
+
+.content-wrapper .home-wrapper .txt-animation .dynamic-txts li{
+    color: rgb(var(--beige));
+    list-style: none;
+    font-size: 6vw;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    margin-left: 2vw;
+    animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -21vw;
+    }
+}
+
+.content-wrapper .home-wrapper .txt-animation .dynamic-txts li span{
+    position: relative;
+    padding: 5px;
+}
+
+.content-wrapper .home-wrapper .txt-animation .dynamic-txts li p{
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(28) infinite,
+                blink 1s infinite alternate;
+}
+
+@keyframes typing{
+    40%, 60%{
+        width: 100%;
+    }
+    0%,100%{
+        width: 0%;
+    }
+}
+
+@keyframes blink{
+    0%, 100%{
+        border-right: 3px solid rgb(var(--beige));
+    }
+    50%{
+        border-right: 3px solid transparent;
+    }
+}
+
+.content-wrapper .home-wrapper .image-animation{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.content-wrapper .home-wrapper .image-animation img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+}
+
+.content-wrapper .resume-wrapper{
+    width: 100%;
+}
+
+.content-wrapper .resume-wrapper h1{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 1.5vw;
+    font-size: 6vw;
+    font-weight: 700;
+}   
+
+.content-wrapper .resume-wrapper h1 span{
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    width: 70%;
+    height: 1.2vw;
+    background-image: linear-gradient(45deg, rgba(var(--beige)), rgba(var(--dark_beige)));
+}
+
+.content-wrapper .resume-wrapper .resume-path{
+    display: flex;
+    width: 100%;
+}
+
+.content-wrapper .resume-wrapper .resume-path .progress-path{
+    width: 10%;
+}
+
+.progress-path .cell{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.progress-path .cell .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-path .cell .outer{
+    width: 4vw;
+    height: 4vw;
+    background-color: rgb(var(--dark_beige));
+}
+
+.progress-path .cell .inner{
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: rgb(var(--light_beige));
+}
+
+.progress-path .cell .filler{
+    width: 0;
+    height: 0;
+    background-color: rgb(var(--dark_beige));
+}
+
+.progress-path .cell .outer-line{
+    width: 0.3vw;
+    height: 50%;
+    background-color: rgb(var(--dark_beige));
+}
+
+.progress-path .cell .b1{
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1.5vw);
+}
+.progress-path .cell .b2{
+    position: absolute;
+    top: 50%;
+    right: calc(50% - 1.5vw);
+}
+
+.progress-path .cell .t1{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1.5vw);
+}
+.progress-path .cell .t2{
+    position: absolute;
+    top: 0;
+    right: calc(50% - 1.5vw);
+}
+
+.progress-path .cell .inner-line{
+    width: 2.4vw;
+    height: 50%;
+    background-color: rgb(var(--light_beige));
+    transform: translate(-50%, 0);
+}
+
+.progress-path .cell .t{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+
+.progress-path .cell .b{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.progress-path .cell .filler-line{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: rgb(var(--dark_beige));
+    transform: translate(-50%, 0);
+}
+
+/* ANIMATION FOR PROGRESS BAR */
+.progress-path .cell.show .filler-line{
+    animation: fillLine 0.5s forwards;
+}
+
+@keyframes fillLine {
+    0%{
+        width: 0;
+    }
+
+    50%{
+        width: 0.5vw;
+    }
+
+    100%{
+        width: 1.8vw;
+    }
+}
+
+.progress-path .cell.show .filler.circle{
+    animation: fillCircle 0.5s forwards;
+}
+
+@keyframes fillCircle {
+    0%,40%{
+        width: 0;
+        height: 0;
+    }
+
+    100%{
+        width: 2.8vw;
+        height: 2.8vw;
+    }
+}
+
+/* END ANIMATION FOR PROGRESS BAR */
+
+
+.resume-path .resume-entries{
+    width: 90%;
+}
+
+.resume-path .resume-entries .entry-wrapper{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.resume-path .resume-entries .entry-wrapper.show{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.resume-path .resume-entries .entry-wrapper span{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(var(--beige));
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.resume-path .resume-entries .entry-wrapper .entry{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(var(--beige));
+    box-shadow: 2px 2px 4px #000;
+}
+
+.resume-path .resume-entries .entry-wrapper .entry .header{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+.resume-path .resume-entries .entry-wrapper .entry .header img{
+    width: 100px;
+    height: 100px;
+    margin: auto 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(var(--dark_grey));
+}
+
+.resume-path .resume-entries .entry-wrapper .entry .info{
+    width: 70%;
+    margin: auto 0;
+    padding-left: 10px;
+}
+
+.resume-path .resume-entries .entry-wrapper .entry .info h2{
+    font-weight: 600;
+    color: rgb(var(--black));
+}
+
+@media only screen and (max-width: 600px){
+    .content-wrapper{
+        width: 100%;
+    }
+}

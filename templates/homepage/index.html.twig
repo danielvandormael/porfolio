@@ -1,0 +1,162 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Daniel Vandormael{% endblock %}
+
+{% block body %}
+
+<div class="view-wrapper">
+    <div class="navbar" id="navbar">
+        <div class="headshot-wrapper">
+            <div class="headshot-border">
+                <img src="{{ absolute_url(asset('imgs/headshot.jpg')) }}" alt="headshot"/>
+            </div>
+        </div>
+
+        <div class="name-wrapper">
+            Daniel Vandormael de Oliveira
+        </div>
+
+        <div class="option-wrapper">
+            <ul class="options">
+                <li id="home" class="active"><div class="bg"></div>Home</li>
+                <li id="resume"><div class="bg"></div>Resume</li>
+                <li id="skills"><div class="bg"></div>Skills</li>
+                <li id="projects"><div class="bg"></div>Projects</li>
+                <li id="comments"><div class="bg"></div>Comments</li>
+                <li id="contact" style="border-right: none;"><div class="bg"></div>Contact</li>
+            </ul>
+        </div>
+
+        <div class="social-wrapper">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="home-wrapper">
+            <div class="image-animation">
+                <img src="{{ absolute_url(asset('imgs/computer.jpg')) }}" alt="cover"/>
+            </div>
+
+            <div class="txt-animation">
+                <div class="static-txt">I'm a</div>
+                <ul class="dynamic-txts">
+                    <li><p>Data Scientist</p></li>
+                    <li><p>Web Developer</p></li>
+                    <li><p>Web Designer</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-wrapper">
+            <h1><span></span>Resume</h1>
+            <div class="resume-essay">
+                
+            </div>
+
+            <div class="resume-path">
+                <div class="progress-path">
+                    <div class="cell">
+                        <span class="outer circle"></span>
+                        <span class="outer-line b1"></span>
+                        <span class="outer-line b2"></span>
+                        
+                        <span class="inner circle"></span>
+                        <span class="inner-line b"></span>
+
+                        <span class="filler circle"></span>
+                    </div>
+
+                    <div class="cell">
+                        <span class="outer circle"></span>
+                        <span class="outer-line t1"></span>
+                        <span class="outer-line t2"></span>
+                        <span class="outer-line b1"></span>
+                        <span class="outer-line b2"></span>
+                        
+                        <span class="inner circle"></span>
+                        <span class="inner-line t"></span>
+                        <span class="inner-line b"></span>
+
+                        <span class="filler-line"></span>
+                        <span class="filler circle"></span>
+                    </div>
+
+                    <div class="cell">
+                        <span class="outer circle"></span>
+                        <span class="outer-line t1"></span>
+                        <span class="outer-line t2"></span>
+                        
+                        <span class="inner circle"></span>
+                        <span class="inner-line t"></span>
+
+                        <span class="filler-line"></span>
+                        <span class="filler circle"></span>
+                    </div>
+                </div>
+                
+                <div class="resume-entries">
+                    <div class="entry-wrapper">
+                        <span></span>
+                        <div class="entry">
+                            <div class="header">
+                                <img src="{{ absolute_url(asset('imgs/computer.jpg')) }}" alt="cover"/>
+                                <div class="info">
+                                    <h2>Example</h2>
+                                    <h5>Position</h5>
+                                </div>
+                                <div class="date">
+                                    <p>April 2022 - August 2022</p>
+                                </div>
+                            </div>
+                            <p class="desc"></p>
+                        </div>
+                    </div>
+
+                    <div class="entry-wrapper">
+                        <span></span>
+                        <div class="entry">
+                            <div class="header">
+                                <img src="{{ absolute_url(asset('imgs/developer.jpg')) }}" alt="cover"/>
+                                <div class="info">
+                                    <h2>Example</h2>
+                                    <h5>Position</h5>
+                                </div>
+                                <div class="date">
+                                    <p>April 2022 - August 2022</p>
+                                </div>
+                            </div>
+                            <p class="desc"></p>
+                        </div>
+                    </div>
+
+                    <div class="entry-wrapper">
+                        <span></span>
+                        <div class="entry">
+                            <div class="header">
+                                <img src="{{ absolute_url(asset('imgs/headshot.jpg')) }}" alt="cover"/>
+                                <div class="info">
+                                    <h2>Example</h2>
+                                    <h5>Position</h5>
+                                </div>
+                                <div class="date">
+                                    <p>April 2022 - August 2022</p>
+                                </div>
+                            </div>
+                            <p class="desc"></p>
+                        </div>
+                    </div>
+                <div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+    </div>
+
+</div>
+
+{% endblock %}
